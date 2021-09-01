@@ -29,7 +29,7 @@ afterAll(async () => {
 export const authsignin = () => {
   // Build a JWT paylod. {id,email}
   const payload = {
-    id: "1lk24j124l",
+    id: new mongoose.Types.ObjectId().toHexString(),
     email: "test@test.com",
   };
   // Create the JWT!
