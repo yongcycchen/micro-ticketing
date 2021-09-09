@@ -16,6 +16,7 @@ interface OrderDoc extends mongoose.Document {
   status: OrderStatus;
   expiresAt: Date;
   ticket: TicketDoc;
+  version: number;
 }
 
 interface OrderModel extends mongoose.Model<OrderDoc> {
@@ -32,7 +33,7 @@ const orderSchema = new mongoose.Schema(
       type: String,
       required: true,
       enum: Object.values(OrderStatus),
-      default: OrderStatus.Created,
+      // default: OrderStatus.Created,
     },
     expiresAt: {
       type: mongoose.Schema.Types.Date,
