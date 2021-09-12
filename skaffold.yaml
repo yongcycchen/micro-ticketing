@@ -40,6 +40,14 @@ build:
         manual:
           - src: "**/*.js"
             dest: .
+    - image: yongcycchen/expiration
+      context: expiration
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: "src/**/*.ts"
+            dest: .
 # apiVersion: skaffold/v2alpha3
 # kind: Config
 # deploy:
