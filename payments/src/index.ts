@@ -35,9 +35,7 @@ const start = async () => {
     process.on("SIGTERM", () => natsWrapper.client.close());
     new OrderCancelledListener(natsWrapper.client).listen();
     new OrderCreatedListener(natsWrapper.client).listen();
-    await mongoose.connect(process.env.MONGO_URI, {
-      // autoIndex: true,
-    });
+    await mongoose.connect(process.env.MONGO_URI, {});
     console.log("Connected to MongoDb");
   } catch (err) {
     console.error(err);
