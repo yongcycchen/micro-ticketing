@@ -86,7 +86,7 @@ spec:
 #     nginx.ingress.kubernetes.io/use-regex: "true"
 # spec:
 #   rules:
-#     - host: www.ticketing-yong.xyz
+#     - host: ticketing.dev
 #       http:
 #         paths:
 #           - path: /api/payments/?(.*)
