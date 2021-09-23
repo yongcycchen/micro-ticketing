@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from 'next/link';
 const LandingPage = ({ currentUser, tickets }) => {
   const ticketList = tickets.map((ticket) => {
     return (
@@ -31,7 +31,7 @@ const LandingPage = ({ currentUser, tickets }) => {
 };
 
 LandingPage.getInitialProps = async (context, client, currentUser) => {
-  const { data } = await client.get("/api/tickets");
+  const { data } = await client.get('/api/tickets');
   return { tickets: data };
 };
 
